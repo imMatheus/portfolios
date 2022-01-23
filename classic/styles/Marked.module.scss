@@ -1,0 +1,51 @@
+.markedWrapper {
+    @apply px-1;
+    position: relative;
+}
+
+$aniSpeed: 1400ms;
+$aniRounds: 1;
+$aniTimingFunction: ease;
+
+.markedWrapper::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    animation: slide $aniSpeed $aniRounds $aniTimingFunction;
+    @apply bg-indigo-600;
+}
+
+@keyframes slide {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+.markedInner {
+    @apply px-1;
+    position: relative;
+    z-index: 10;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(
+        to right,
+        white 50%,
+        rgb(23 23 23 / 1) 50%
+    );
+    background-size: 200%;
+    background-position: 0%;
+    animation: bgSlide $aniSpeed $aniRounds $aniTimingFunction;
+}
+
+@keyframes bgSlide {
+    from {
+        background-position: 100%;
+    }
+    to {
+        background-position: 0%;
+    }
+}
