@@ -1,0 +1,19 @@
+.button {
+    position: relative;
+    @apply py-2 border border-black rounded-md w-32 sm:w-36 text-sm cursor-pointer;
+
+    > svg {
+        position: absolute;
+        @apply left-2 w-5 h-5 top-1/2 -translate-y-1/2;
+    }
+}
+
+.dark {
+    @extend .button;
+    @apply bg-black text-white;
+}
+
+.light {
+    @extend .button;
+    @apply bg-white text-black;
+}
