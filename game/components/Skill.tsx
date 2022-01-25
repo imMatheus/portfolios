@@ -16,7 +16,7 @@ const Skill: React.FC = ({}) => {
                         quis repudiandae eius, numquam necessitatibus autem ex
                         aperiam consequatur consectetur amet. Iusto vero, ipsum
                         voluptas voluptate. Blanditiis maxime quasi alias
-                        recusandae itaque,
+                        recusandae
                     </p>
                     <h2 className='text-2xl lg:text-3xl font-bold mb-1'>
                         Work
