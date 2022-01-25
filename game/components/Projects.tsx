@@ -6,7 +6,7 @@ interface ProjectsProps {}
 const Projects: React.FC<ProjectsProps> = ({}) => {
     return (
         <div className='bg-orange-600 relative pb-10 ' id='projects'>
-            <h2 className='relative mb-6 text-center text-2xl md:text-4xl lg:text-6xl 2xl:text-8xl font-piazzolla font-bold pt-10 text-orange-100'>
+            <h2 className='relative mb-6 text-center text-4xl md:text-5xl lg:text-6xl 2xl:text-8xl font-piazzolla font-bold pt-10 text-orange-100'>
                 Projects
             </h2>
             <div className='relative w-full px-5 md:px-10 space-y-8 lg:space-y-14'>

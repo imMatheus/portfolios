@@ -6,7 +6,7 @@ import Skill from '../components/Skill'
 
 const Home: NextPage = () => {
     return (
-        <main className='w-screen min-h-screen'>
+        <main className='w-screen min-h-screen overflow-hidden'>
             <Hero />
             <Skill />
             <Projects />

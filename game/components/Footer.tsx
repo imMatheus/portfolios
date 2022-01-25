@@ -10,7 +10,7 @@ const Footer: React.FC = ({}) => {
         setSuccess(true)
     }
     return (
-        <footer className='bg-orange-900 p-5 sm:p-8 md:p-14 lg:px-28 md:grid md:grid-cols-2'>
+        <footer className='bg-orange-900 p-5 sm:p-8 md:p-14 lg:px-28 xl:grid xl:grid-cols-2'>
             <div className='max-w-lg'>
                 <h3 className='text-3xl font-piazzolla font-bold text-orange-100 mb-3'>
                     Contact me!
@@ -94,18 +94,27 @@ const Footer: React.FC = ({}) => {
                     </div>
                 </form>
             </div>
-            <div className='w-max ml-auto flex flex-col justify-center items-center'>
-                <h2 className='text-orange-100 text-7xl font-piazzolla font-black text-right'>
+            <div className='xl:w-max mt-6 xl:mt-0 xl:ml-auto flex flex-col justify-center items-center'>
+                <h2 className='mr-auto xl:mr-0 text-orange-100 text-5xl font-piazzolla font-black xl:text-right'>
                     Find me online
                 </h2>
                 <div className='flex gap-2 mt-4'>
                     <SocialLink
                         Icon={GitHub}
-                        href='https://github.com/imMatheus/portfolios/'
+                        href='https://github.com/imMatheus/'
                     />
-                    <SocialLink Icon={Twitter} href='' />
-                    <SocialLink Icon={Linkedin} href='' />
-                    <SocialLink Icon={Instagram} href='' />
+                    <SocialLink
+                        Icon={Twitter}
+                        href='https://github.com/imMatheus/'
+                    />
+                    <SocialLink
+                        Icon={Linkedin}
+                        href='https://github.com/imMatheus/'
+                    />
+                    <SocialLink
+                        Icon={Instagram}
+                        href='https://github.com/imMatheus/'
+                    />
                 </div>
             </div>
         </footer>
