@@ -1,5 +1,10 @@
 # portfolios
 
+## Live demos
+Game - [https://game-three-azure.vercel.app/](https://game-three-azure.vercel.app/)
+Modern - [https://modern-kohl.vercel.app/](https://modern-kohl.vercel.app/)
+Classic - [https://classic-six.vercel.app/](https://classic-six.vercel.app/)
+
 new profolio
 
 ```bash
