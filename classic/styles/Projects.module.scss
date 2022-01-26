@@ -1,0 +1,92 @@
+// .container {
+//     // width: 100vh;
+//     // height: 100vw;
+//     background-color: #161616;
+//     overflow: hidden;
+//     scroll-snap-type: x mandatory;
+//     // overflow-x: scroll;
+//     display: flex;
+//     transform: rotate(-90deg) translateX(-100vh);
+//     transform-origin: top left;
+//     overflow-y: scroll;
+//     overflow-x: hidden;
+//     // position: absolute;
+//     // display: flex;
+//     // flex-direction: row;
+//     // width: 300vw;
+// }
+
+// .block {
+//     // flex: none;
+//     width: 100vw;
+//     height: 100vh;
+//     scroll-snap-align: start;
+//     transform: rotate(90deg) translateX(100vh);
+//     transform-origin: center;
+
+//     &:nth-child(1) {
+//         @apply bg-sky-400;
+//     }
+//     &:nth-child(2) {
+//         @apply bg-sky-500;
+//     }
+//     &:nth-child(3) {
+//         @apply bg-sky-600;
+//     }
+//     &:nth-child(4) {
+//         @apply bg-sky-700;
+//     }
+//     &:nth-child(5) {
+//         @apply bg-sky-800;
+//     }
+// }
+
+.outer {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    position: absolute;
+
+    @media (min-width: 1024px) {
+        width: 100vh;
+        height: 100vw;
+        transform: rotate(-90deg) translateX(-100vh);
+        transform-origin: top left;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.wrapper {
+    @media (min-width: 1024px) {
+        display: flex;
+        flex-direction: row;
+        width: 400vw;
+        transform: rotate(90deg) translateY(-100vh);
+        transform-origin: top left;
+        scroll-snap-type: x mandatory;
+        overflow-x: scroll;
+
+        .slide {
+            scroll-snap-align: start;
+        }
+    }
+    .slide {
+        width: 100vw;
+        @apply lg:h-screen;
+        &:nth-child(1) {
+            @apply bg-indigo-500;
+        }
+        &:nth-child(2) {
+            @apply bg-indigo-600;
+        }
+        &:nth-child(3) {
+            @apply bg-indigo-700;
+        }
+        &:nth-child(4) {
+            @apply bg-indigo-800;
+        }
+    }
+}

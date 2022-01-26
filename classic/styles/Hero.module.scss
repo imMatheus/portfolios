@@ -5,18 +5,17 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    transform-origin: center center;
     @apply transition-all;
 }
 
-#profileImages:hover {
+#profileImages {
     .image {
-        &:nth-child(2) {
-            width: 95%;
-            height: 95%;
-        }
-        &:nth-child(3) {
-            width: 90%;
-            height: 90%;
+        @for $i from 1 to 5 {
+            &:nth-child(#{$i}) {
+                width: (100 - (5 * ($i - 1))) * 1%;
+                height: (100 - (5 * ($i - 1))) * 1%;
+            }
         }
     }
 }

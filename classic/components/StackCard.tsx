@@ -1,23 +1,12 @@
 import React from 'react'
 
-interface StackCardProps {
-    color: string
-    title: string
-    description: string
-}
+interface StackCardProps {}
 
-const StackCard: React.FC<StackCardProps> = ({ color, title, description }) => {
+const StackCard: React.FC<StackCardProps> = ({ children }) => {
     return (
-        <div className='shadow cursor-pointer transition-shadow p-4 flex items-center rounded-lg'>
-            <div
-                className='flex-shrink-0 w-8 h-8 md:w-10 md:h-10 rounded-full mr-2'
-                style={{ backgroundColor: color }}
-            ></div>
-            <div>
-                <h4 className='font-thin font-inter text-lg'>{title}</h4>
-                <p>{description}</p>
-            </div>
-        </div>
+        <h4 className='text-center px-1 py-4 lg:px-6 lg:py-6 font-medium font-dm-serif text-lg lg:text-3xl h-full flex items-center justify-center'>
+            {children}
+        </h4>
     )
 }
 

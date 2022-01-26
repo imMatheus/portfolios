@@ -1,15 +1,15 @@
 import type { NextPage } from 'next'
 import Hero from '../components/Hero'
+import Projects from '../components/Projects'
 import Stacks from '../components/Stacks'
-import styles from '../styles/Slides.module.scss'
+
 const Home: NextPage = () => {
     return (
-        <main className='bg-indigo-200 text-neutral-900'>
+        <main className='bg-indigo-200 text-neutral-900 font-dm-serif'>
             <Hero />
             <Stacks />
-            <section>
-                <div className={styles.slide}></div>
-            </section>
+            <Projects />
+            <section className='h-screen bg-indigo-900'></section>
         </main>
     )
 }

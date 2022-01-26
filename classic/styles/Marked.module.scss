@@ -1,18 +1,26 @@
-.markedWrapper {
-    @apply px-1;
-    position: relative;
-}
-
-$aniSpeed: 1400ms;
+$aniSpeed: 1600ms;
 $aniRounds: 1;
 $aniTimingFunction: ease;
 
-.markedWrapper::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    animation: slide $aniSpeed $aniRounds $aniTimingFunction;
-    @apply bg-indigo-600;
+.markedWrapper {
+    @apply px-1;
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        animation: slide $aniSpeed $aniRounds $aniTimingFunction;
+        @apply bg-indigo-600;
+    }
+}
+
+.markedWrapperDarked {
+    @extend .markedWrapper;
+
+    &::before {
+        @apply bg-indigo-100;
+    }
 }
 
 @keyframes slide {
@@ -39,6 +47,15 @@ $aniTimingFunction: ease;
     background-size: 200%;
     background-position: 0%;
     animation: bgSlide $aniSpeed $aniRounds $aniTimingFunction;
+}
+
+.markedInnerDarked {
+    @extend .markedInner;
+    background-image: linear-gradient(
+        to right,
+        rgb(49 46 129) 50%,
+        rgb(224 231 255) 50%
+    );
 }
 
 @keyframes bgSlide {
