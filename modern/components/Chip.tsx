@@ -8,7 +8,7 @@ interface ChipProps {
 const Chip: React.FC<ChipProps> = ({ text, color, children }) => {
     return (
         <div
-            className={`rounded-full text-xs sm:text-sm border py-1 px-3`}
+            className='rounded-full text-xs sm:text-sm border py-1 px-3'
             style={{ borderColor: color }}
             // style={{ borderColor: color, background: color }}
         >
